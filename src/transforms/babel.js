@@ -24,7 +24,8 @@ const JSX_PRAGMA = {
   react: 'React.createElement',
   preact: 'h',
   nervjs: 'Nerv.createElement',
-  hyperapp: 'h'
+  hyperapp: 'h',
+  mithril: 'm'
 };
 
 async function babelTransform(asset) {
