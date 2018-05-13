@@ -823,6 +823,13 @@ describe('javascript', function() {
     assert(file.includes('h("div"'));
   });
 
+  it('should support compiling JSX in JS files with mithril dependency', async function() {
+    await bundle(__dirname + '/integration/jsx-mithril/index.js');
+
+    let file = fs.readFileSync(__dirname + '/dist/index.js', 'utf8');
+    assert(file.includes('m("div"'));
+  });
+
   it('should support optional dependencies in try...catch blocks', async function() {
     let b = await bundle(__dirname + '/integration/optional-dep/index.js');
 
